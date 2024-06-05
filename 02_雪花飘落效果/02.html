@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: url('./bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        h1{
+            font-size: 5em;
+            color: rgba(255, 255, 255, .5);
+            text-transform: uppercase;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            letter-spacing: .2em;
+        }
+        section .snow{
+            width: 100%;
+            height: 100%;
+            background-image: url('./xh.png');
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        section .snow1{
+            /* filter设置图片边缘模糊，这里用来设置雪花变模糊 */
+            filter: blur(5px);
+            background-size: 600px;
+            animation: snow-down1 15s linear infinite;
+        }
+        section .snow2{
+            filter: blur(3px);
+            background-size: 400px;
+            animation: snow-down2 13s linear infinite;
+        }
+        section .snow3{
+            filter: blur(3px);
+            background-size: 200px;
+            animation: snow-down3 10s linear infinite;
+        }
+        @keyframes snow-down1 {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 200px 100vh;
+            }
+        }
+        @keyframes snow-down2 {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 300px 100vh;
+            }
+        }
+        @keyframes snow-down3 {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 300px 100vh;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <h1>lipn rainbow</h1>
+    <section>
+        <div class="snow snow1"></div>
+        <div class="snow snow2"></div>
+        <div class="snow snow3"></div> 
+    </section>
+
+
+    <!-- 
+        section{
+            width: 100%;
+            height: 100%;
+        }
+        .snow{
+            background: url('./xh.png');
+            /* background-size: 100% 100%; */
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+        section .snow1{
+            /* filter设置图片边缘模糊，这里用来设置雪花变模糊 */
+            /* filter: blur(5px);
+            background-size: 300px;
+            animation: snow-down1 15s linear infinite; */
+        }
+        section .snow2{
+            /* filter设置图片边缘模糊，这里用来设置雪花变模糊 */
+            background: url('./xh.png');
+            filter: blur(3px);
+            background-size: 800px;
+            animation: snow-down2 15s linear infinite;
+        }
+        @keyframes snow-down1 {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 200px 100vh;
+            }
+        }
+        @keyframes snow-down2 {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: 400px 100vh;
+            }
+        }
+     -->
+</body>
+</html>
