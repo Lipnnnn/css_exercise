@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片折叠效果</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+        .box{
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .box div{
+            width: 150px;
+            height: 150px;
+            background-color: white;
+            font-size: 50px;
+            color: #bbb;
+            line-height: 150px;
+            text-align: center;
+            transition: all .3s;
+        }
+        .box:hover div:nth-child(odd){
+            /* 所有偶数div */
+            transform: skewY(-15deg);
+            color: #ccc;
+            box-shadow: 0 70px 20px rgba(0, 0, 0, 0.1);
+        }
+        .box:hover div:nth-child(even){
+            /* 所有奇数div */
+            transform: skewY(15deg);
+            color: #ccc;
+            box-shadow: 0 70px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        使用倾斜transform:skew()和阴影box-shadow来实现
+    -->
+    <div class="box">
+        <div>X</div>
+        <div>L</div>
+        <div>I</div>
+        <div>P</div>
+        <div>N</div>
+        <div>X</div>
+    </div>
+    
+</body>
+</html>
